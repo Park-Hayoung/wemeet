@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.wemeet.fragment.MainFragment"
+        android:label="@string/main_label"
+        tools:layout="@layout/fragment_main"/>
+    <navigation
+        android:id="@+id/graph_login"
+        app:startDestination="@id/loginHomeFragment">
+        <fragment
+            android:id="@+id/loginHomeFragment"
+            android:name="com.example.wemeet.fragment.LoginHomeFragment"
+            android:label="@string/login_main_label"
+            tools:layout="@layout/fragment_login_home">
+            <action
+                android:id="@+id/action_loginHomeFragment_to_signUpWithEmailFragment"
+                app:destination="@id/signUpWithEmailFragment" />
+            <action
+                android:id="@+id/action_loginHomeFragment_to_loginInputFragment"
+                app:destination="@id/loginInputFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/loginInputFragment"
+            android:name="com.example.wemeet.fragment.LoginInputFragment"
+            android:label="@string/login_label"
+            tools:layout="@layout/fragment_login_input">
+            <action
+                android:id="@+id/action_loginInputFragment_to_mainFragment"
+                app:destination="@id/mainFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpWithEmailFragment"
+            android:name="com.example.wemeet.fragment.SignUpWithEmailFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up_with_email">
+            <action
+                android:id="@+id/action_signUpWithEmailFragment_to_signUpAgreeFragment"
+                app:destination="@id/signUpAgreeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpAgreeFragment"
+            android:name="com.example.wemeet.fragment.SignUpAgreeFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up_agree">
+            <action
+                android:id="@+id/action_signUpAgreeFragment_to_SignUpAuthFragment"
+                app:destination="@id/signUpAuthFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpAuthFragment"
+            android:name="com.example.wemeet.fragment.SignUpAuthFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up_auth">
+            <action
+                android:id="@+id/action_signUpAuthFragment_to_signUpProfileTallFragment"
+                app:destination="@id/signUpProfileTallFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpProfileTallFragment"
+            android:name="com.example.wemeet.fragment.SignUpProfileTallFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up_profile_tall">
+            <action
+                android:id="@+id/action_signUpProfileTallFragment_to_signUpProfileAgeFragment"
+                app:destination="@id/signUpProfileAgeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpProfileAgeFragment"
+            android:name="com.example.wemeet.fragment.SignUpProfileAgeFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up_profile_age">
+            <action
+                android:id="@+id/action_signUpProfileAgeFragment_to_signUpSelfieFragment"
+                app:destination="@id/signUpSelfieFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpSelfieFragment"
+            android:name="com.example.wemeet.fragment.SignUpSelfieFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up_selfie">
+            <action
+                android:id="@+id/action_signUpSelfieFragment_to_mainFragment"
+                app:destination="@id/mainFragment" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_mainFragment2"
+            app:destination="@id/mainFragment" />
+    </navigation>
+</navigation>

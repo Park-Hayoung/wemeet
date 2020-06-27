@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.wemeet.MainActivity">
+
+    <item
+        android:id="@+id/menu_message"
+        android:title="message"
+        android:icon="@drawable/ic_message"
+        app:showAsAction="always">
+    </item>
+
+</menu>

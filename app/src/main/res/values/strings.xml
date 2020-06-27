@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WeMeet</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_label"></string>
+    <string name="login_main_label"></string>
+    <string name="login_label">로그인</string>
+    <string name="sign_up_label">회원가입</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello">Hello!</string>
+    <string name="forgot_password"><u>혹시 비밀번호를 잊으셨나요?</u></string>
+</resources>

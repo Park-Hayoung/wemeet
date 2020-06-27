@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SignUpAuthFragment"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_oval"
+            android:backgroundTint="#FA9380"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="19sp"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#E5E5E5"/>
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_oval"
+            android:backgroundTint="#E4E4E4"
+            android:fontFamily="@font/bold"
+            android:text="2"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="19sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#E5E5E5" />
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_oval"
+            android:backgroundTint="#F0F0F0"
+            android:fontFamily="@font/bold"
+            android:text="3"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="19sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#E5E5E5" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="휴대폰 인증"
+        android:textSize="14sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="21sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="국가 선택"
+        android:textSize="14sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="21sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_spinner"
+        android:entries="@array/country"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E5E5E5"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="휴대폰 번호"
+        android:textSize="14sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="21sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"/>
+
+    <EditText
+        android:id="@+id/editText_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="17sp"
+        android:inputType="phone"
+        android:hint="휴대폰 번호를 입력해주세요."
+        android:textColorHint="#737373"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp">
+
+        <TextView
+            android:id="@+id/textView_auth_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="21sp"
+            android:text="인증번호"
+            android:textColor="#4f4f4f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:text="남은 시간   00 : 00"
+            android:textSize="12sp"
+            android:textColor="#939393"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="23sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <EditText
+            android:id="@+id/editText_auth_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/bold"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="17sp"
+            android:inputType="phone"
+            android:hint="인증번호를 입력해주세요."
+            android:textColorHint="#737373" />
+
+        <TextView
+            android:id="@+id/textView_auth_num_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:fontFamily="@font/bold"
+            android:text="인증번호 재발송"
+            android:textSize="12sp"
+            android:textColor="#fa9380"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="23sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:stateListAnimator="@null">
+
+        <Button
+            android:id="@+id/button_request_auth_number"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_rect_gray"
+            android:fontFamily="@font/bold"
+            android:text="인증번호 받기"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="5sp"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_rect_gray"
+            android:fontFamily="@font/bold"
+            android:text="다음"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="5sp"
+            android:stateListAnimator="@null"/>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.LoginInputFragment"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_kakao"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="카카오"
+                android:textSize="14sp"
+                android:textColor="#838383"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="21sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_facebook"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="페이스북"
+                android:textSize="14sp"
+                android:textColor="#838383"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_oval_border"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:srcCompat="@drawable/ic_google"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/medium"
+                android:text="구글"
+                android:textSize="14sp"
+                android:textColor="#838383"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="21sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_divide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/divider_left"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#E5E5E5" />
+
+        <TextView
+            android:id="@+id/textView_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:textColor="#4f4f4f"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="19sp"
+            android:text="또는"
+            android:paddingStart="46dp"
+            android:paddingEnd="46dp"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="이메일"
+        android:textSize="14sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="21sp"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="24dp"/>
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="17sp"
+        android:hint="이메일을 입력해주세요."
+        android:textColorHint="#737373" />
+
+    <TextView
+        android:id="@+id/textView_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="비밀번호"
+        android:textSize="14sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="21sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"/>
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:fontFamily="@font/bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="17sp"
+        android:hint="비밀번호를 입력해주세요."
+        android:textColorHint="#737373"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp" />
+
+    <TextView
+        android:id="@+id/textView_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="혹시 비밀번호를 잊으셨나요?"
+        android:textSize="12sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="23sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="47dp"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_rect_gray"
+        android:fontFamily="@font/bold"
+        android:text="로그인"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="5sp"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

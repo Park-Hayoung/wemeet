@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SignUpSelfieFragment"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:srcCompat="@drawable/ic_checked"
+            android:scaleX="1.2"
+            android:scaleY="1.2"/>
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#FA9380"
+            android:backgroundTint="#FA9380"/>
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:srcCompat="@drawable/ic_checked"
+            android:scaleX="1.2"
+            android:scaleY="1.2"/>
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#FA9380" />
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_oval_pink_16dp"
+            android:fontFamily="@font/bold"
+            android:text="3"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="19sp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#E5E5E5" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_divide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:background="#E5E5E5" />
+
+        <TextView
+            android:id="@+id/textView_bienvenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:fontFamily="@font/bold"
+            android:text="닉네임 님 사진을 추가해주세요!"
+            android:textSize="16sp"
+            android:textColor="#4f4f4f"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <FrameLayout
+            android:id="@+id/container_picture_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rect_gray_with_pink_border"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imageView_selfie_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rect_gray_with_pink_border"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_user_icon_1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_selfie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9.5dp"
+                    android:fontFamily="@font/bold"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="8sp"
+                    android:text="+ 메인 사진 추가"
+                    android:textColor="#FA9380"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/container_picture_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rect_gray_with_border"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imageView_selfie_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rect_gray_with_border"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_user_icon_2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_selfie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9.5dp"
+                    android:fontFamily="@font/bold"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="8sp"
+                    android:text="+ 사진 추가"
+                    android:textColor="#CBCBCB"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <FrameLayout
+            android:id="@+id/container_picture_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rect_gray_with_border"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imageView_selfie_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rect_gray_with_border"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_user_icon_3"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_selfie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9.5dp"
+                    android:fontFamily="@font/bold"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="8sp"
+                    android:text="+ 사진 추가"
+                    android:textColor="#CBCBCB"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/container_picture_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rect_gray_with_border"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imageView_selfie_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rect_gray_with_border"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView_user_icon_4"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_selfie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9.5dp"
+                    android:fontFamily="@font/bold"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="8sp"
+                    android:text="+ 사진 추가"
+                    android:textColor="#CBCBCB"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="프로필 사진은 반드시 얼굴이 선명히 보여야 합니다."
+        android:textSize="14sp"
+        android:textColor="#4f4f4f"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="21sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp" />
+
+    <Button
+        android:id="@+id/button_complete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_rect_gray"
+        android:fontFamily="@font/bold"
+        android:text="회원가입 완료"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="5sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_banner_progress"
+        android:elevation="4dp"
+        android:paddingStart="8dp"
+        android:paddingTop="1.5dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="1.5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
+
+        <TextView
+            android:id="@+id/textView_current_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="1"
+            android:textSize="9sp"
+            android:textColor="#939393"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="4sp" />
+
+        <TextView
+            android:id="@+id/textView_total_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:text=" / 3"
+            android:textSize="9sp"
+            android:textColor="#939393"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="4sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_yesterday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:includeFontPadding="false"
+        android:text="YESTERDAY"
+        android:textSize="20sp"
+        android:textColor="#3c3c3c"
+        android:letterSpacing="0.1"
+        android:lineSpacingExtra="9sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_yesterday"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:includeFontPadding="false"
+            android:text="매칭된 친구"
+            android:textSize="20sp"
+            android:textColor="#3c3c3c"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="9sp"/>
+
+        <TextView
+            android:id="@+id/textView_match_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="3"
+            android:textSize="20sp"
+            android:textColor="#fa9380"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="9sp"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

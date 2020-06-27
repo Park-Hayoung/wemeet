@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="country">
+        <item>대한민국 (+82)</item>
+        <item>미국 (+1)</item>
+        <item>일본 (+81)</item>
+        <item>중국 (+86)</item>
+    </string-array>
+
+    <string-array name="body">
+        <item>마름</item>
+        <item>보통</item>
+        <item>통통</item>
+        <item>뚱뚱</item>
+    </string-array>
+
+    <string-array name="education">
+        <item>고등학교 중퇴</item>
+        <item>고등학교 졸업</item>
+        <item>2년제 대학교 졸업</item>
+        <item>4년제 대학교 졸업</item>
+        <item>대학교 중퇴</item>
+        <item>대학교 휴학</item>
+        <item>대학교 석사과정 (졸업)</item>
+        <item>대학교 박사과정 (졸업)</item>
+    </string-array>
+    
+    <string-array name="job">
+        <item>사업가</item>
+        <item>회사원</item>
+        <item>자영업</item>
+        <item>건설업</item>
+        <item>교육업</item>
+    </string-array>
+    
+    <string-array name="frequency">
+        <item>안함</item>
+        <item>가끔</item>
+        <item>보통</item>
+        <item>자주</item>
+    </string-array>
+</resources>
