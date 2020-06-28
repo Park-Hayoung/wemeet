@@ -19,6 +19,8 @@ import com.example.wemeet.data.UserItem;
 public class UserFragment extends Fragment {
     private UserItem user;
 
+    private boolean isTemporary;
+
     private ImageView iv_user_image;
     private TextView tv_age;
     private TextView tv_nickname;
@@ -26,6 +28,11 @@ public class UserFragment extends Fragment {
 
     public UserFragment(UserItem userItem) {
         this.user = userItem;
+    }
+
+    public UserFragment(UserItem user, boolean isTemporary) {
+        this.user = user;
+        this.isTemporary = isTemporary;
     }
 
     @Nullable
@@ -36,7 +43,7 @@ public class UserFragment extends Fragment {
 
         iv_user_image = root.findViewById(R.id.imageView_user_image);
 
-        Bitmap bitmap = getLowerQualityBitmap();
+        Bitmap bitmap = getBitmap();
         iv_user_image.setImageBitmap(bitmap);
 
         tv_age = root.findViewById(R.id.textView_age);
@@ -56,12 +63,16 @@ public class UserFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    private Bitmap getLowerQualityBitmap() {
+    private Bitmap getBitmap() {
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();
         bmOptions.inJustDecodeBounds = false;
-        bmOptions.inSampleSize = 2;
+        bmOptions.inSampleSize = 4;
 
-        Bitmap bitmap = BitmapFactory.decodeFile(user.getUserImage1(), bmOptions);
+        Bitmap bitmap;
+        if (isTemporary)
+            bitmap = BitmapFactory.decodeResource(getResources(), Integer.parseInt(user.getUserImage1()), bmOptions);
+        else
+            bitmap = BitmapFactory.decodeFile(user.getUserImage1(), bmOptions);
 
         return bitmap;
     }

@@ -190,10 +190,12 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences userInfo = getSharedPreferences("userInfo", MODE_PRIVATE);
 
         String userId = userInfo.getString("userId", null);
-        String userPwd = userInfo.getString("userPwd", null);
+        String userPassword = userInfo.getString("userPassword", null);
+
+        Log.d(TAG, "userId = " + userId + " | userPassword = " + userPassword);
 
         // 저장된 아이디와 비밀번호가 없으면 로그인 그래프로 이동
-        if (userId == null && userPwd == null) {
+        if (userId == null && userPassword == null) {
             navController.navigate(R.id.graph_login);
         }
     }

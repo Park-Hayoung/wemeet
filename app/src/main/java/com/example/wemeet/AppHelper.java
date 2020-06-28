@@ -16,8 +16,8 @@ public class AppHelper {
             "   user_password text, " +
             "   nickname text, " +
             "   introduce text, " +
-            "   terms_use boolean, " +
-            "   terms_notification boolean, " +
+            "   terms_use integer, " +
+            "   terms_notification integer, " +
             "   country text, " +
             "   phone text, " +
             "   tall integer, " +

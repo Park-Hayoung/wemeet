@@ -1,7 +1,9 @@
 package com.example.wemeet.fragment;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -27,6 +29,7 @@ import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.wemeet.AppHelper;
 import com.example.wemeet.R;
 import com.example.wemeet.data.UserItem;
 
@@ -36,6 +39,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SignUpSelfieFragment extends Fragment {
+    private Context context;
+
     private FrameLayout container1;
     private FrameLayout container2;
     private FrameLayout container3;
@@ -59,6 +64,13 @@ public class SignUpSelfieFragment extends Fragment {
     private static final int REQUEST_TAKE_PHOTO = 1;
 
     private static final String TAG = "SignUpSelfie";
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+        this.context = context;
+    }
 
     @Nullable
     @Override
@@ -127,13 +139,11 @@ public class SignUpSelfieFragment extends Fragment {
         buttonComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                printUserItem();
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("userItem", user);
+                insertUserData();
+                commitUserData();
 
                 NavHostFragment.findNavController(SignUpSelfieFragment.this)
-                        .navigate(R.id.action_signUpSelfieFragment_to_mainFragment, bundle);
+                        .navigate(R.id.action_signUpSelfieFragment_to_mainFragment);
             }
         });
     }
@@ -251,21 +261,49 @@ public class SignUpSelfieFragment extends Fragment {
         imageView.setImageBitmap(bitmap);
     }
 
-    private void printUserItem() {
-        Log.d(TAG, user.getUserId());
-        Log.d(TAG, user.getUserPassword());
-        Log.d(TAG, user.getNickname());
-        Log.d(TAG, String.valueOf(user.isTermsUse()));
-        Log.d(TAG, String.valueOf(user.isTermsNotification()));
-        Log.d(TAG, user.getCountry());
-        Log.d(TAG, user.getPhone());
-        Log.d(TAG, String.valueOf(user.getTall()));
-        Log.d(TAG, user.getBodyShape());
-        Log.d(TAG, user.getEducation());
-        Log.d(TAG, String.valueOf(user.getAge()));
-        Log.d(TAG, user.getJob());
-        Log.d(TAG, user.getDrink());
-        Log.d(TAG, user.getSmoke());
-        Log.d(TAG, user.getUserImage1());
+    private void insertUserData() {
+        // 한 줄 소개를 작성하지 않았으므로 임의로 한 줄 소개를 입력해줌
+        user.setIntroduce("위밋에서 진정한 사랑을 찾고 싶어요~^^");
+
+        user.printItems();
+
+        String sql = "insert into user " +
+                "(" +
+                "user_id, " +
+                "user_password, " +
+                "nickname, " +
+                "introduce, " +
+                "terms_use, " +
+                "terms_notification, " +
+                "country, " +
+                "phone, " +
+                "tall, " +
+                "body_shape, " +
+                "education, " +
+                "age, " +
+                "job, " +
+                "drink, " +
+                "smoke, " +
+                "user_image1, " +
+                "user_image2, " +
+                "user_image3, " +
+                "user_image4" +
+                ") " +
+                "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        if (AppHelper.database != null) {
+            AppHelper.database.execSQL(sql, user.getObjects());
+        }
+    }
+
+    // 다음 앱 실행에서 자동으로 로그인되도록 SharedPreferences 에도 저장해줌
+    private void commitUserData() {
+        SharedPreferences sharedPreferences =
+                context.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+        if (sharedPreferences != null) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("userId", user.getUserId());
+            editor.putString("userPassword", user.getUserPassword());
+            editor.apply();
+        }
     }
 }

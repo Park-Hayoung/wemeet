@@ -70,8 +70,8 @@ public class SignUpAgreeFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("userItem", user);
 
-                boolean termsUse = checkBoxService.isChecked();
-                boolean termsNotif = checkBoxNotification.isChecked();
+                int termsUse = checkBoxService.isChecked() ? 1 : 0;
+                int termsNotif = checkBoxNotification.isChecked() ? 1 : 0;
                 user.setTermsUse(termsUse);
                 user.setTermsNotification(termsNotif);
 

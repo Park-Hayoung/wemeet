@@ -64,7 +64,7 @@
             android:id="@+id/textView_match_start"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@drawable/bg_rect_pink_light"
+            android:background="@drawable/selector_game_bar"
             android:fontFamily="@font/regular"
             android:text="위로 올려 매칭게임 시작하기"
             android:textSize="16sp"
@@ -73,7 +73,9 @@
             android:lineSpacingExtra="8sp"
             android:textAlignment="center"
             android:gravity="center"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <ImageView
             android:layout_width="24dp"

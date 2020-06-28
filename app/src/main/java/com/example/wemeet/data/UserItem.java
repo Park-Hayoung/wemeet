@@ -1,5 +1,7 @@
 package com.example.wemeet.data;
 
+import android.util.Log;
+
 import java.io.Serializable;
 
 public class UserItem implements Serializable {
@@ -7,8 +9,8 @@ public class UserItem implements Serializable {
     private String userPassword;
     private String nickname;
     private String introduce;
-    private boolean termsUse;
-    private boolean termsNotification;
+    private int termsUse;
+    private int termsNotification;
     private String country;
     private String phone;
     private int tall;
@@ -22,6 +24,44 @@ public class UserItem implements Serializable {
     private String userImage2;
     private String userImage3;
     private String userImage4;
+
+    private static final String TAG = "UserItem";
+
+    public Object[] getObjects() {
+        Object[] objects = {userId, userPassword, nickname, introduce, termsUse, termsNotification,
+                            country, phone, tall, bodyShape, education, age, job, drink, smoke,
+                            userImage1, userImage2, userImage3, userImage4};
+
+        return objects;
+    }
+
+    public void printItems() {
+        Log.d(TAG, userId);
+        Log.d(TAG, userPassword);
+        Log.d(TAG, nickname);
+        Log.d(TAG, introduce);
+        Log.d(TAG, String.valueOf(termsUse));
+        Log.d(TAG, String.valueOf(termsNotification));
+        Log.d(TAG, country);
+        Log.d(TAG, phone);
+        Log.d(TAG, String.valueOf(tall));
+        Log.d(TAG, bodyShape);
+        Log.d(TAG, education);
+        Log.d(TAG, String.valueOf(age));
+        Log.d(TAG, job);
+        Log.d(TAG, drink);
+        Log.d(TAG, smoke);
+        Log.d(TAG, userImage1);
+        if (userImage2 != null) {
+            Log.d(TAG, userImage2);
+        }
+        if (userImage3 != null) {
+            Log.d(TAG, userImage3);
+        }
+        if (userImage4 != null) {
+            Log.d(TAG, userImage4);
+        }
+    }
 
     public String getUserId() {
         return userId;
@@ -55,19 +95,19 @@ public class UserItem implements Serializable {
         this.introduce = introduce;
     }
 
-    public boolean isTermsUse() {
+    public int getTermsUse() {
         return termsUse;
     }
 
-    public void setTermsUse(boolean termsUse) {
+    public void setTermsUse(int termsUse) {
         this.termsUse = termsUse;
     }
 
-    public boolean isTermsNotification() {
+    public int getTermsNotification() {
         return termsNotification;
     }
 
-    public void setTermsNotification(boolean termsNotification) {
+    public void setTermsNotification(int termsNotification) {
         this.termsNotification = termsNotification;
     }
 
