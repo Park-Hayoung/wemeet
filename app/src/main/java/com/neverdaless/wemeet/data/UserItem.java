@@ -1,10 +1,11 @@
-package com.example.wemeet.data;
+package com.neverdaless.wemeet.data;
 
 import android.util.Log;
 
 import java.io.Serializable;
 
 public class UserItem implements Serializable {
+    private int id; // auto increment id in SQLite
     private String userId;
     private String userPassword;
     private String nickname;
@@ -28,7 +29,7 @@ public class UserItem implements Serializable {
     private static final String TAG = "UserItem";
 
     public Object[] getObjects() {
-        Object[] objects = {userId, userPassword, nickname, introduce, termsUse, termsNotification,
+        Object[] objects = {id, userId, userPassword, nickname, introduce, termsUse, termsNotification,
                             country, phone, tall, bodyShape, education, age, job, drink, smoke,
                             userImage1, userImage2, userImage3, userImage4};
 
@@ -36,6 +37,7 @@ public class UserItem implements Serializable {
     }
 
     public void printItems() {
+        Log.d(TAG, String.valueOf(id));
         Log.d(TAG, userId);
         Log.d(TAG, userPassword);
         Log.d(TAG, nickname);
@@ -62,6 +64,10 @@ public class UserItem implements Serializable {
             Log.d(TAG, userImage4);
         }
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getUserId() {
         return userId;

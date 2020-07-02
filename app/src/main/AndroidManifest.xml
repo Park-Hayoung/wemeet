@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wemeet">
+    package="com.neverdaless.wemeet">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -17,12 +17,12 @@
         <!--provider 정의-->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.wemeet"
+            android:authorities="com.neverdaless.wemeet"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
 
         <activity
@@ -35,6 +35,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--네이티브 앱 키 설정-->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="{NATIVE_APP_KEY}" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.wemeet.fragment;
+package com.neverdaless.wemeet.fragment;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -21,7 +21,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.wemeet.R;
+import com.neverdaless.wemeet.R;
 
 import java.util.HashMap;
 

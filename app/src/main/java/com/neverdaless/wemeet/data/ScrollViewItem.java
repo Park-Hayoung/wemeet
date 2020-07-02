@@ -1,4 +1,4 @@
-package com.example.wemeet.data;
+package com.neverdaless.wemeet.data;
 
 public class ScrollViewItem {
     int value;

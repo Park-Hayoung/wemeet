@@ -1,4 +1,4 @@
-package com.example.wemeet.fragment;
+package com.neverdaless.wemeet.fragment;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,8 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.wemeet.R;
-import com.example.wemeet.data.UserItem;
+import com.neverdaless.wemeet.R;
+import com.neverdaless.wemeet.data.UserItem;
 
 public class UserFragment extends Fragment {
     private UserItem user;

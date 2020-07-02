@@ -1,10 +1,10 @@
-package com.example.wemeet.data;
+package com.neverdaless.wemeet.data;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.wemeet.fragment.UserFragment;
+import com.neverdaless.wemeet.fragment.UserFragment;
 
 import java.util.ArrayList;
 

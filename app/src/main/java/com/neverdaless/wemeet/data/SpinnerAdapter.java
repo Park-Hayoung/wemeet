@@ -1,4 +1,4 @@
-package com.example.wemeet.data;
+package com.neverdaless.wemeet.data;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.core.content.res.ResourcesCompat;
 
-import com.example.wemeet.R;
+import com.neverdaless.wemeet.R;
 
 public class SpinnerAdapter extends ArrayAdapter<String> {
     private Context context;

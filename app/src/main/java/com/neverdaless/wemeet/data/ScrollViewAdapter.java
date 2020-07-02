@@ -1,4 +1,4 @@
-package com.example.wemeet.data;
+package com.neverdaless.wemeet.data;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wemeet.R;
+import com.neverdaless.wemeet.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.wemeet;
+package com.neverdaless.wemeet;
 
 import org.junit.Test;
 

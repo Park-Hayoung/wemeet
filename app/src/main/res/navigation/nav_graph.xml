@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.wemeet.fragment.MainFragment"
+        android:name="com.neverdaless.wemeet.fragment.MainFragment"
         android:label="@string/main_label"
         tools:layout="@layout/fragment_main"/>
     <navigation
@@ -15,7 +15,7 @@
         app:startDestination="@id/loginHomeFragment">
         <fragment
             android:id="@+id/loginHomeFragment"
-            android:name="com.example.wemeet.fragment.LoginHomeFragment"
+            android:name="com.neverdaless.wemeet.fragment.LoginHomeFragment"
             android:label="@string/login_main_label"
             tools:layout="@layout/fragment_login_home">
             <action
@@ -27,7 +27,7 @@
         </fragment>
         <fragment
             android:id="@+id/loginInputFragment"
-            android:name="com.example.wemeet.fragment.LoginInputFragment"
+            android:name="com.neverdaless.wemeet.fragment.LoginInputFragment"
             android:label="@string/login_label"
             tools:layout="@layout/fragment_login_input">
             <action
@@ -36,7 +36,7 @@
         </fragment>
         <fragment
             android:id="@+id/signUpWithEmailFragment"
-            android:name="com.example.wemeet.fragment.SignUpWithEmailFragment"
+            android:name="com.neverdaless.wemeet.fragment.SignUpWithEmailFragment"
             android:label="@string/sign_up_label"
             tools:layout="@layout/fragment_sign_up_with_email">
             <action
@@ -45,7 +45,7 @@
         </fragment>
         <fragment
             android:id="@+id/signUpAgreeFragment"
-            android:name="com.example.wemeet.fragment.SignUpAgreeFragment"
+            android:name="com.neverdaless.wemeet.fragment.SignUpAgreeFragment"
             android:label="@string/sign_up_label"
             tools:layout="@layout/fragment_sign_up_agree">
             <action
@@ -54,7 +54,7 @@
         </fragment>
         <fragment
             android:id="@+id/signUpAuthFragment"
-            android:name="com.example.wemeet.fragment.SignUpAuthFragment"
+            android:name="com.neverdaless.wemeet.fragment.SignUpAuthFragment"
             android:label="@string/sign_up_label"
             tools:layout="@layout/fragment_sign_up_auth">
             <action
@@ -63,7 +63,7 @@
         </fragment>
         <fragment
             android:id="@+id/signUpProfileTallFragment"
-            android:name="com.example.wemeet.fragment.SignUpProfileTallFragment"
+            android:name="com.neverdaless.wemeet.fragment.SignUpProfileTallFragment"
             android:label="@string/sign_up_label"
             tools:layout="@layout/fragment_sign_up_profile_tall">
             <action
@@ -72,7 +72,7 @@
         </fragment>
         <fragment
             android:id="@+id/signUpProfileAgeFragment"
-            android:name="com.example.wemeet.fragment.SignUpProfileAgeFragment"
+            android:name="com.neverdaless.wemeet.fragment.SignUpProfileAgeFragment"
             android:label="@string/sign_up_label"
             tools:layout="@layout/fragment_sign_up_profile_age">
             <action
@@ -81,7 +81,7 @@
         </fragment>
         <fragment
             android:id="@+id/signUpSelfieFragment"
-            android:name="com.example.wemeet.fragment.SignUpSelfieFragment"
+            android:name="com.neverdaless.wemeet.fragment.SignUpSelfieFragment"
             android:label="@string/sign_up_label"
             tools:layout="@layout/fragment_sign_up_selfie">
             <action

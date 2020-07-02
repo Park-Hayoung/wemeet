@@ -57,20 +57,38 @@
     <RelativeLayout
         android:id="@+id/container_match_start"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="85dp"
         android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_rect_pink_top_left_right_radius_24dp"
+            android:backgroundTint="#29FA9380"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="29dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_rect_pink_top_left_right_radius_24dp"
+            android:backgroundTint="#3DFA9380"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"/>
 
         <TextView
             android:id="@+id/textView_match_start"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@drawable/selector_game_bar"
-            android:fontFamily="@font/regular"
+            android:background="@drawable/bg_rect_pink_top_left_right_radius_24dp"
+            android:fontFamily="@font/bold"
             android:text="위로 올려 매칭게임 시작하기"
-            android:textSize="16sp"
-            android:textColor="#ffbfb4"
-            android:letterSpacing="-0.03"
-            android:lineSpacingExtra="8sp"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="6sp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_alignParentBottom="true"
@@ -78,11 +96,13 @@
             android:focusable="true"/>
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_up"
+            android:id="@+id/imageView_match_start_up"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bg_ic_up"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"/>
 
     </RelativeLayout>
 

@@ -1,4 +1,4 @@
-package com.example.wemeet.fragment;
+package com.neverdaless.wemeet.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -29,9 +29,9 @@ import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.wemeet.AppHelper;
-import com.example.wemeet.R;
-import com.example.wemeet.data.UserItem;
+import com.neverdaless.wemeet.AppHelper;
+import com.neverdaless.wemeet.R;
+import com.neverdaless.wemeet.data.UserItem;
 
 import java.io.File;
 import java.io.IOException;

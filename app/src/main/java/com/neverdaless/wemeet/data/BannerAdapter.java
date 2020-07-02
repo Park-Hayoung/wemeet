@@ -1,4 +1,4 @@
-package com.example.wemeet.data;
+package com.neverdaless.wemeet.data;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.wemeet.R;
+import com.neverdaless.wemeet.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.wemeet.fragment;
+package com.neverdaless.wemeet.fragment;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,9 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.wemeet.AppHelper;
-import com.example.wemeet.R;
-import com.example.wemeet.data.UserItem;
+import com.neverdaless.wemeet.R;
+import com.neverdaless.wemeet.data.UserItem;
 
 public class SignUpWithEmailFragment extends Fragment {
     private EditText editTextNickname;

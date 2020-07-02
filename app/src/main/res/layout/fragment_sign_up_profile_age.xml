@@ -143,7 +143,7 @@
         android:indeterminate="false"
         android:max="8"
         android:progress="4"
-        android:progressDrawable="@drawable/shape_line"
+        android:progressDrawable="@drawable/bg_line"
         android:textAlignment="center"
         android:thumb="@drawable/bg_oval_pink_16dp"
         app:tickMark="@null"

@@ -1,4 +1,4 @@
-package com.example.wemeet.fragment;
+package com.neverdaless.wemeet.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,11 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.wemeet.R;
-import com.example.wemeet.data.ScrollViewAdapter;
-import com.example.wemeet.data.ScrollViewItem;
-import com.example.wemeet.data.SpinnerAdapter;
-import com.example.wemeet.data.UserItem;
+import com.neverdaless.wemeet.R;
+import com.neverdaless.wemeet.data.ScrollViewAdapter;
+import com.neverdaless.wemeet.data.ScrollViewItem;
+import com.neverdaless.wemeet.data.SpinnerAdapter;
+import com.neverdaless.wemeet.data.UserItem;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 
 import static androidx.recyclerview.widget.RecyclerView.OnClickListener;

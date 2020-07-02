@@ -1,4 +1,4 @@
-package com.example.wemeet;
+package com.neverdaless.wemeet;
 
 import android.content.Context;
 import android.database.Cursor;

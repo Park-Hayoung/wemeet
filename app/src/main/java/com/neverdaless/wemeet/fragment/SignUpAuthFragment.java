@@ -1,4 +1,4 @@
-package com.example.wemeet.fragment;
+package com.neverdaless.wemeet.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -21,9 +21,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.wemeet.R;
-import com.example.wemeet.data.SpinnerAdapter;
-import com.example.wemeet.data.UserItem;
+import com.neverdaless.wemeet.R;
+import com.neverdaless.wemeet.data.SpinnerAdapter;
+import com.neverdaless.wemeet.data.UserItem;
 
 public class SignUpAuthFragment extends Fragment {
     private Spinner spinnerCountry;

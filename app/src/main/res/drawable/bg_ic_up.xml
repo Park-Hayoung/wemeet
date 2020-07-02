@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_oval_pink_with_white_border_2dp"
+        android:width="40dp"
+        android:height="40dp"
+        android:gravity="center"/>
+
+    <item android:drawable="@drawable/ic_up"
+        android:width="24dp"
+        android:height="24dp"
+        android:gravity="center"/>
+
+</layer-list>
