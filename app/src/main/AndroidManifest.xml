@@ -39,7 +39,7 @@
         <!--네이티브 앱 키 설정-->
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="{NATIVE_APP_KEY}" />
+            android:value="786cad5c3c4c550c6e0ee1a92de1ca46" />
     </application>
 
 </manifest>

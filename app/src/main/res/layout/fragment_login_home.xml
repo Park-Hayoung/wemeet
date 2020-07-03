@@ -25,8 +25,10 @@
         android:fontFamily="@font/bold"
         android:includeFontPadding="false"
         android:text="Hello!"
-        android:textColor="#FA9380"
         android:textSize="26sp"
+        android:textColor="#fa9380"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
         app:layout_constraintBottom_toTopOf="@+id/textView_slogan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +42,10 @@
         android:fontFamily="@font/regular"
         android:includeFontPadding="false"
         android:text="모두가 자유로운 삶을 누릴 때까지"
-        android:textColor="#767676"
         android:textSize="16sp"
+        android:textColor="#767676"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_hello" />
@@ -56,67 +60,68 @@
         android:background="@drawable/bg_rect_pink"
         android:fontFamily="@font/bold"
         android:includeFontPadding="false"
+        android:text="로그인"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
         android:letterSpacing="-0.02"
         android:lineSpacingExtra="5sp"
-        android:text="로그인"
-        android:textColor="#ffffff"
-        android:textSize="14sp"
+        android:stateListAnimator="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_slogan"
-        android:stateListAnimator="@null"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_slogan" />
 
     <RelativeLayout
-        android:id="@+id/relativeLayout_sign_up_with_google"
+        android:id="@+id/linearLayout_gmail"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:background="@drawable/bg_rect_pink_border"
+        android:gravity="center"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/bg_rect_pink_border"
+        android:focusable="true"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_login">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView_google"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_google"
+            android:layout_toStartOf="@id/textView_gmail"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/textView_gmail"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:text="G-mail로 "
+            android:textSize="14sp"
+            android:textColor="#4f4f4f"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="5sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
 
-            <ImageView
-                android:id="@+id/imageView_google"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_google" />
-
-            <TextView
-                android:id="@+id/textView_gmail"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/regular"
-                android:includeFontPadding="false"
-                android:textColor="#4f4f4f"
-                android:textSize="14sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="G-mail로 " />
-
-            <TextView
-                android:id="@+id/textView_sign_up"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/bold"
-                android:includeFontPadding="false"
-                android:textColor="#FA9380"
-                android:textSize="14sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="가입하기" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:text="가입하기"
+            android:textSize="14sp"
+            android:textColor="#FA9380"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="5sp"
+            android:layout_toEndOf="@id/textView_gmail"
+            android:layout_gravity="center"
+            android:gravity="center" />
 
     </RelativeLayout>
 
@@ -130,7 +135,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout_sign_up_with_google">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_gmail">
 
         <View
             android:id="@+id/divider"
@@ -148,33 +153,36 @@
             android:background="@android:color/white"
             android:fontFamily="@font/bold"
             android:includeFontPadding="false"
-            android:textColor="#444444"
-            android:textSize="14sp"
             android:text="10만에 위밋 가입하기"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:letterSpacing="-0.05"
+            android:lineSpacingExtra="5sp"
             android:paddingStart="5.4dp"
             android:paddingEnd="5.4dp"/>
 
     </FrameLayout>
 
-    <ImageView
-        android:id="@+id/imageView5"
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/button_kakao"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/layout_divide"
-        app:srcCompat="@drawable/ic_kakao" />
+        app:layout_constraintEnd_toStartOf="@+id/button_facebook"
+        app:layout_constraintTop_toBottomOf="@+id/layout_divide"/>
 
-    <ImageView
-        android:id="@+id/imageView6"
+    <Button
+        android:id="@+id/button_facebook"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/ic_facebook"
+        android:focusable="true"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_divide"
-        app:srcCompat="@drawable/ic_facebook" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_divide"/>
 
     <Button
         android:id="@+id/button_email"
@@ -185,12 +193,12 @@
         android:background="@drawable/bg_oval_border"
         android:fontFamily="@font/regular"
         android:includeFontPadding="false"
+        android:text="이메일"
         android:letterSpacing="-0.05"
         android:lineSpacingExtra="9sp"
         android:textColor="#a9a6a6"
         android:textSize="10sp"
-        android:text="이메일"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/button_facebook"
         app:layout_constraintTop_toBottomOf="@+id/layout_divide" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 키 해쉬 구하기
         Log.d(TAG, getKeyHash(this));
 
         textViewTitle = findViewById(R.id.textView_title);
